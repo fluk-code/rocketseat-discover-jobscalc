@@ -2,6 +2,7 @@ const Job = require('../model/Job')
 const JobUtils = require('../utils/JobUtils')
 const Profile = require('../model/Profile')
 
+
 module.exports = {
     async index(req, res) {
         const jobs = await Job.get()
@@ -10,6 +11,7 @@ module.exports = {
         let statusCount = {
             progress: 0,
             done: 0,
+            standby: 0,
             total: jobs.length
         }
 
@@ -18,10 +20,16 @@ module.exports = {
 
         const updateJobs = jobs.map((job) => {
             // ajustes no job
-            const remaining = JobUtils.remainingDays(job)
-            const status = remaining <= 0 ? 'done' : 'progress'
 
-            // Somando a quantidade de status
+            const started = JobUtils.started(job);
+            const remaining = JobUtils.remainingDays(job)
+            let status = 'standby'
+            
+            if(started){
+                status = remaining <= 0 ? 'done' : 'progress'
+            }
+
+            // Somando a quantidade de status 
             statusCount[status] += 1
 
             // Soma a qtd de horas por dia dos Jobs em progresso

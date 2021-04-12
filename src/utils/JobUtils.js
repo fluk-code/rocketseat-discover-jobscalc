@@ -13,7 +13,15 @@ module.exports = {
         const dayDiff = Math.ceil(timeDiffInMs / dayInMs)
 
         // restam x dias
-        return dayDiff
+        return dayDiff + job["start-at"]
+    },
+    started(job){
+        const dayInMs = 1000 * 60 * 60 * 24
+        const startAtInMs = dayInMs * job["start-at"]
+        const started = (Date.now() - startAtInMs) >= job["created-at"] ? true : false   
+
+        return started
+        
     },
     calculateBudget: (job, valueHour) => valueHour * job["total-hours"]
 }

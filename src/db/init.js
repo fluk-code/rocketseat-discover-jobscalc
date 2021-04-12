@@ -24,6 +24,7 @@ const initDb = {
             name TEXT, 
             daily_hours INT,
             total_hours INT,
+            start_at INT,
             created_at DATETIME
         )`)
 
@@ -52,24 +53,28 @@ const initDb = {
                 name,
                 daily_hours,
                 total_hours, 
+                start_at,
                 created_at
             )
             VALUES(
                 "Pizzaria Gulosso",
                 2,
                 1,
+                10,
                 1617752087350
         );`)
         await db.run(`INSERT INTO jobs (
                 name,
                 daily_hours,
                 total_hours, 
+                start_at,
                 created_at
             )
             VALUES(
                 "OneTwo Project",
                 2,
                 1,
+                0,
                 1617752067379
         );`)
 

@@ -26,12 +26,15 @@
 
   --color-cancel: #E1E3E5;
   --color-delete: #EB3B35; 
+  --color-standby: #485460; 
   --color-save: #36B336;
   
   --color-badge-progress-text: var(--color-save);
   --color-badge-progress-background: #E8F8E8;
   --color-badge-done-text: var(--color-delete);
   --color-badge-done-background:#FAECEB;
+  --color-badge-standby-text: var(--color-standby);
+  --color-badge-standby-background:#d2dae2;
 
   --color-header-inner-title: var(--color-card-label)
 

@@ -169,6 +169,22 @@ main {
   linear-gradient(90deg, rgba(250, 156, 45, 0.1) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
     white;
 }
+.card.standby:hover {
+  background: 
+  linear-gradient(90deg, var(--color-badge-standby-background) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
+    white;
+}
+.card.progress:hover {
+  background: 
+  linear-gradient(90deg, var(--color-badge-progress-background) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
+    white;
+}
+.card.done:hover {
+  background: 
+  linear-gradient(90deg, var(--color-badge-done-background) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
+    white;
+}
+
 
 .card::before {
   content: ' ';
@@ -184,6 +200,16 @@ main {
   left: -1px;
 
   transition: all .2s;
+}
+
+.card.standby::before {
+  background-color: var(--color-standby);
+}
+.card.progress::before {
+  background-color: var(--color-save);
+}
+.card.done::before {
+  background-color: var(--color-delete);
 }
 
 .card:hover::before {

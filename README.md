@@ -1,3 +1,5 @@
+
+
 <h1 align="center">
   <img alt="JobsCalc" title="JobsCalc" src="https://i.imgur.com/Veqm7Gh.png" width="220px" />
 </h1>
@@ -11,15 +13,22 @@
 
 <p align="center">
  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
-
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+ <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
 
 <br>
 
-<p align="center">
-  <img alt="dev.finances" src=".github/jobscalc.png" width="100%">
-</p>
+## :memo: Créditos 
+
+Esse projeto foi desenvolvido durante a segunda maratona Discover oferecido gratuitamente pela [Rocketseat](https://rocketseat.com.br/) 
+<br>
+:wave: [Participe da comunidade!](https://discordapp.com/invite/gCRAFhc)
+
+## :memo: Licença 
+O projeto está sob a licença MIT. 
+Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+
+---
 
 ## 🚀 Tecnologias
 
@@ -41,10 +50,15 @@ O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/s4fytPFbDiSkv4GPSfKaLE/Jobs-Planning). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## :memo: Licença
+## Commits em aula
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+As implementações realizadas até o sexto commit "lesson 5: corrected the rounded in the remainingDays function", foram realziadas seguindo as aulas da maratona
 
----
-Projeto desenvolvido durante a segunda maratona Discover da [Rocketseat](https://rocketseat.com.br/)
-:wave: [Participe da comunidade!](https://discordapp.com/invite/gCRAFhc)
+## Melhorias 
+
+✔️ Possibilitar lançamentos de Jobs futuros com status de "Não Iniciados"
+<br>
+💭 Possibilitar o controle de atividade atrassadas
+<br>
+💭 Criar opções de filtro "Nome do Job", "Status"
+   

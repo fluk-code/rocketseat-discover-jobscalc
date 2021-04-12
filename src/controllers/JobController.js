@@ -9,6 +9,7 @@ module.exports = {
     async save(req,res){    
         await Job.create({
             name: req.body.name,
+            "start-at": req.body["start-at"],
             "daily-hours": req.body["daily-hours"],
             "total-hours": req.body["total-hours"],
             "create-at": Date.now() // Atribuindo nova data
@@ -36,7 +37,8 @@ module.exports = {
         const updatedJob = {
             name: req.body.name,
             "total-hours": req.body["total-hours"],
-            "daily-hours": req.body["daily-hours"] 
+            "daily-hours": req.body["daily-hours"],
+            "start-at": req.body["start-at"] 
         }
 
         await Job.update(updatedJob, jobId)

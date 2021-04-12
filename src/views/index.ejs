@@ -55,6 +55,10 @@
               <strong><%= statusCount.total %> </strong>
               Projetos ao total
             </div>
+            <div class="in-standby">
+              <strong><%= statusCount.standby %> </strong>
+              Aguardando início
+            </div>
             <div class="in-progress">
               <strong><%= statusCount.progress %> </strong>
               Em andamento
@@ -89,10 +93,10 @@
               <div class="deadline column">
                 <span>Prazo</span>
                 <p>
-                  <% if(job.status === 'progress'){ %> 
-                    <%= job.remaining %>  dias para a entrega
-                  <% }else{ %>
+                  <% if(job.status === 'done'){ %> 
                     Prazo encerrado
+                  <% }else{ %>
+                    <%= job.remaining %>  dias para a entrega
                   <% } %> 
                 </p>
               </div>
@@ -101,7 +105,16 @@
                 <p>R$ <%= job.budget.toFixed(2).replace('.',',') %> </p>
               </div>
               <div class="status badge column">
-                <%= job.status === 'done' ? 'Encerrado' : 'Em andamento' %> 
+                <% 
+                    switch (job.status) {
+                      case 'done': %>Encerrado<%                        
+                            break;
+                      case 'standby':%>Não iniciado<%  
+                            break;
+                      default:%>Em andamento<%  
+                        break;
+                    }
+                %> 
               </div>
               <div class="actions column flex">
                 <p class="sr-only">Ações</p>

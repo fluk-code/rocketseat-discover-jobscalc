@@ -35,3 +35,8 @@
   background: var(--color-badge-done-background);
   color: var(--color-badge-done-text);
 }
+
+.standby .badge {
+  background: var(--color-badge-standby-background);
+  color: var(--color-badge-standby-text);
+}
