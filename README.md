@@ -1,5 +1,4 @@
 # Maratona NodeJs Rocketseat
-- Atividades realizados no modulo HTTP
 - [Link do Curso](https://maratonadiscover.rocketseat.com.br/maratona/aula-02)
 
 # Tecnologias Estudas
